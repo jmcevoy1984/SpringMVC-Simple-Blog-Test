@@ -1,0 +1,27 @@
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>Blog Made With Spring MVC</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<link rel="stylesheet" th:href="@{mystyle.css}"/>
+	</head>
+	<body>
+		<div id='header'>
+			<div class='title'>My Blog</div>
+		</div>
+		<div id='main'>
+			<div id='page-content'>
+			<div class='heading'>Blog Posts</div>
+			<hr/>
+				<div class='post' th:each="post : ${posts}">
+					<div class='heading' th:text="${post.title}"></div>
+					<hr/>
+					<div th:text="${'Posted: ' + post.date}"></div>
+					<br/>
+					<div class='post-content' th:text="${post.content}"></div>
+				</div>
+			</div>
+		</div>
+		<div id='footer'>
+		</div>
+	</body>
+</html>
