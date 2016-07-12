@@ -37,5 +37,11 @@ public class BlogController{
 		model.addAttribute("posts", allPosts);
 		return "posts";
 	}
+
+	@RequestMapping(value="/viewPosts", method=RequestMethod.GET)
+	public String createPost(Model model){
+		model.addAttribute("posts", allPosts);
+		return "posts";
+	}
 	
 }
