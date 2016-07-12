@@ -10,7 +10,8 @@
 		</div>
 		<div id='main'>
 			<div id='page-content'>
-			<div class='heading'>Blog Posts</div>
+			<span class='heading'>Blog Posts</span>
+			<span class='link-container'><a href='/createPost'>New Post</a></span>
 			<hr/>
 				<div class='post' th:each="post : ${posts}">
 					<div class='heading' th:text="${post.title}"></div>
@@ -19,6 +20,7 @@
 					<br/>
 					<div class='post-content' th:text="${post.content}"></div>
 				</div>
+				<br/>
 			</div>
 		</div>
 		<div id='footer'>

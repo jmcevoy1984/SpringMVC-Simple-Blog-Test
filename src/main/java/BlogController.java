@@ -16,7 +16,7 @@ public class BlogController{
 
 	public ArrayList<Post> allPosts = new ArrayList<Post>();
 	
-	@RequestMapping(value="/createPost", method=RequestMethod.GET)
+	@RequestMapping(value={"/createPost", "/"}, method=RequestMethod.GET)
 	public String viewPosts(Model model){
 
 		//Add a key/value pair to the "model" map (aka: hash, hasmap, dict etc..)
@@ -26,7 +26,7 @@ public class BlogController{
 		return "addPost";
 	}
 
-	@RequestMapping(value="/createPost", method=RequestMethod.POST)
+	@RequestMapping(value="/viewPosts", method=RequestMethod.POST)
 	public String createPost(@ModelAttribute Post post, Model model){
 		//LocalDateTime currentTime = LocalDateTime.now();
 		LocalDate currentDate = LocalDate.now();

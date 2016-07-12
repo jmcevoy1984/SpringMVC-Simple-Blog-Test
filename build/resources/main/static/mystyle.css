@@ -87,3 +87,10 @@ body{
 	margin: 0px;
 	white-space: pre;
 }
+
+.link-container{
+	float: right;
+	display: inline-flex;
+	align-items: flex-end;
+	height: 40px;
+}
