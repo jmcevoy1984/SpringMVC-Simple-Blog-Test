@@ -18,7 +18,7 @@
 					<hr/>
 					<div th:text="${'Posted: ' + post.date}"></div>
 					<br/>
-					<div class='post-content' th:text="${post.content}"></div>
+					<div class='post-content' th:utext="${#strings.unescapeJava(#strings.replace(#strings.escapeJava(post.content),'\n','&lt;br /&gt;'))}"></div>
 				</div>
 				<br/>
 			</div>
