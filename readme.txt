@@ -1,4 +1,4 @@
-#Very Very basic Spring-MVC Blog App with Spring Boot and Gradle
+#Very basic Spring-MVC Blog App with Spring Boot and Gradle
 
 This is an incredibly basic blog app I created with Spring MVC.
 
